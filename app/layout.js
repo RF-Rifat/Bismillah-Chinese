@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Footer from "@/components/Shared/footer";
 import MainNavbar from "@/components/Shared/navbar";
+import SideBarCart from "@/components/Shared/SideBarCart";
 
 const latin = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`max-w-screen-2xl mx-auto px-6 ${latin.className}`}>
         <MainNavbar />
+        {/* <SideBarCart /> */}
         {children}
         <Footer />
       </body>

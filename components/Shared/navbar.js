@@ -171,6 +171,7 @@ import {
   UserCircleIcon,
   Cog6ToothIcon,
 } from "@heroicons/react/24/solid";
+import SideBarCart from "./SideBarCart";
 const NavTab = () => {
   const data = [
     {
@@ -198,30 +199,32 @@ const NavTab = () => {
     },
   ];
   return (
-    <Tabs value="/" className="bg-transparent">
-      <TabsHeader
-        className="rounded-none border-b border-blue-gray-50 bg-transparent"
-        // indicatorProps={{
-        //   className: "bg-gray-900/10 shadow-none !text-gray-900",
-        // }}
-      >
-        {data.map(({ label, value, icon }) => (
-          <Link href={value} key={value}>
-            <Tab value={value} className="w-36">
-              <div
-                className="flex items-center gap-2 text-lg"
-                indicatorProps={{
-                  className: "text-white",
-                }}
-              >
-                {/* {React.createElement(icon, { className: "w-5 h-5" })} */}
-                {label}
-              </div>
-            </Tab>
-          </Link>
-        ))}
-      </TabsHeader>
-    </Tabs>
+    <>
+      <Tabs value="/" className="bg-transparent">
+        <TabsHeader
+          className="rounded-none border-b border-blue-gray-50 bg-transparent"
+          // indicatorProps={{
+          //   className: "bg-gray-900/10 shadow-none !text-gray-900",
+          // }}
+        >
+          {data.map(({ label, value, icon }) => (
+            <Link href={value} key={value}>
+              <Tab value={value} className="w-36">
+                <div
+                  className="flex items-center gap-2 text-lg"
+                  indicatorProps={{
+                    className: "text-white",
+                  }}
+                >
+                  {/* {React.createElement(icon, { className: "w-5 h-5" })} */}
+                  {label}
+                </div>
+              </Tab>
+            </Link>
+          ))}
+        </TabsHeader>
+      </Tabs>
+    </>
   );
 };
 
