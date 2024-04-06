@@ -3,6 +3,7 @@ import "./globals.css";
 
 import Footer from "@/components/Shared/footer";
 import Providers from "@/lib/React-Query/Query-Provider";
+import { NavbarSimple } from "@/components/Shared/navbar";
 
 const latin = Inter({ subsets: ["latin"] });
 
@@ -22,10 +23,13 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="shortcut icon" href="/image/logo.png" type="image/png" />
       </head>
-      <body className={`max-w-screen-2xl mx-auto px-6 ${latin.className}`}>
+      <body className={`max-w-screen-2xl mx-auto ${latin.className}`}>
         <Providers>
-          {children}
-          <Footer />
+          <NavbarSimple />
+          <div className="px-2 lg:px-6">
+            {children}
+            <Footer />
+          </div>
         </Providers>
       </body>
     </html>
