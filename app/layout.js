@@ -2,7 +2,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 import Footer from "@/components/Shared/footer";
-import { MainNavbar } from "@/components/Shared/navbar";
 import Providers from "@/lib/React-Query/Query-Provider";
 
 const latin = Inter({ subsets: ["latin"] });
@@ -25,7 +24,6 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`max-w-screen-2xl mx-auto px-6 ${latin.className}`}>
         <Providers>
-          <MainNavbar />
           {children}
           <Footer />
         </Providers>
