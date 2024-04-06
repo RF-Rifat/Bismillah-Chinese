@@ -14,8 +14,8 @@ const BanglaCursive = Alkatra({
   subsets: ["bengali"],
   display: "swap",
   weight: ["500", "700"],
+  adjustFontFallback: false,
 });
-
 const Footer = () => {
   return (
     <>
@@ -66,11 +66,11 @@ const Footer = () => {
                 <li>
                   <a
                     href="https://www.facebook.com/people/%E0%A6%AC%E0%A6%BF%E0%A6%B8%E0%A6%AE%E0%A6%BF%E0%A6%B2%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B9%E0%A7%8D-%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A6%A8%E0%A6%BF%E0%A6%9C-%E0%A6%B0%E0%A7%87%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A7%81%E0%A6%B0%E0%A7%87%E0%A6%A8%E0%A7%8D%E0%A6%9F-Beautiful-Service-is-Our-Dream/100083517151611"
-                    class="inline-flex items-center font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                    className="inline-flex items-center font-medium text-blue-600 dark:text-blue-500 hover:underline"
                   >
                     Bismillah-Chinese
                     <svg
-                      class="w-4 h-4 ms-2 rtl:rotate-180"
+                      className="w-4 h-4 ms-2 rtl:rotate-180"
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -78,9 +78,9 @@ const Footer = () => {
                     >
                       <path
                         stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
                         d="M1 5h12m0 0L9 1m4 4L9 9"
                       />
                     </svg>
@@ -89,11 +89,11 @@ const Footer = () => {
                 <li>
                   <a
                     href="mailto:mailto:info@bismillahchinese.com"
-                    class="inline-flex items-center font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                    className="inline-flex items-center font-medium text-blue-600 dark:text-blue-500 hover:underline"
                   >
                     Email
                     <svg
-                      class="w-4 h-4 ms-2 rtl:rotate-180"
+                      className="w-4 h-4 ms-2 rtl:rotate-180"
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -101,9 +101,9 @@ const Footer = () => {
                     >
                       <path
                         stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
                         d="M1 5h12m0 0L9 1m4 4L9 9"
                       />
                     </svg>
@@ -188,10 +188,10 @@ const Footer = () => {
             </svg>
           </span>
         </div>
-        <hr class="my-2 border-gray-200 sm:mx-auto dark:border-black lg:my-4" />
-        <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
+        <hr className="my-2 border-gray-200 sm:mx-auto dark:border-black lg:my-4" />
+        <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
           © 2024{" "}
-          <a href="https://flowbite.com/" class="hover:underline">
+          <a href="https://flowbite.com/" className="hover:underline">
             Bismillah-Chinese
           </a>
           . All Rights Reserved.

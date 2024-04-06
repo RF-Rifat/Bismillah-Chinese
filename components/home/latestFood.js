@@ -1,7 +1,12 @@
+import { useEffect, useState } from "react";
 import FoodCard from "../Shared/FoodCard";
 import FoodCardTitle from "../Shared/FoodCardTitle";
+import useGetUserData from "@/data/getData";
 
 const LatestFood = () => {
+  const [foodData, refetch, isPending] = useGetUserData("/api/food");
+
+  console.log(foodData);
   const cardData = [
     {
       id: 1,
@@ -19,13 +24,6 @@ const LatestFood = () => {
     },
     {
       id: 3,
-      imageSrc: "/image/food1.jpg",
-      title: "বিসমিল্লাহ্ চাইনিজ, সেট মেনু প্লাটার",
-      description:
-        "বিগ মাটন, ফ্রাইড রাইস, সালাদ এবং চানিজ ভেজিটেবল মূল্য: 450.00",
-    },
-    {
-      id: 4,
       imageSrc: "/image/food1.jpg",
       title: "বিসমিল্লাহ্ চাইনিজ, সেট মেনু প্লাটার",
       description:

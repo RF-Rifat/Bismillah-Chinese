@@ -9,7 +9,6 @@ import {
   Button,
   Collapse,
 } from "@material-tailwind/react";
-import FoodSearch from "./foodSearch";
 import FoodCard from "@/components/Shared/FoodCard";
 import LatestFood from "@/components/home/latestFood";
 import MenuFoodCard from "./menuFoodCard";
@@ -109,39 +108,29 @@ export function FoodMenu() {
       desc: <LatestFood />,
     },
   ];
-  const [open, setOpen] = React.useState(true);
 
-  const toggleOpen = () => setOpen((cur) => !cur);
   return (
     <>
-      <div className="flex gap-4 my-10">
-        <h2 className="inline-block">আপনার পছন্দের খাবার খুঁজুন</h2>
-        <FoodSearch />
-      </div>
       <Tabs
         value="all"
         className="my-6"
         id="custom-animation"
         orientation={resTab ? "vertical" : "horizontal"}
+        // orientation={"vertical"}
         color="green"
       >
         <div className="my-2 !sticky !top-2">
-          <Button color="green" fullWidth onClick={toggleOpen}>
-            {open ? "Close" : "Open"}
-          </Button>
-          <Collapse open={open}>
-            <TabsHeader
-              className={`${
-                open ? "lg:w-60" : ""
-              } sticky bg-white top-0 transition-all duration-150`}
-            >
-              {data.map(({ label, value }) => (
-                <Tab className="p-2 md:p-6" key={value} value={value}>
-                  {label}
-                </Tab>
-              ))}
-            </TabsHeader>
-          </Collapse>
+          <TabsHeader className="sticky top-0 transition-all duration-150">
+            {data.map(({ label, value }) => (
+              <Tab
+                className="p-2 md:p-6 inline-block"
+                key={value}
+                value={value}
+              >
+                {label} - 10
+              </Tab>
+            ))}
+          </TabsHeader>
         </div>
 
         <TabsBody>
