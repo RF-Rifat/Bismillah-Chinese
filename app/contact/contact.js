@@ -11,12 +11,10 @@ const Contact = () => {
       >
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d225.38649379573667!2d89.54391303993036!3d25.3316093208381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fd23ec01ac27b3%3A0xf25430023edf5f8a!2sBismillah%20Restaurant!5e0!3m2!1sen!2sus!4v1706165239434!5m2!1sen!2sus"
-          allowfullscreen=""
           referrerpolicy="no-referrer-when-downgrade"
           width="100%"
           height="100%"
           style={{ border: 0 }}
-          allowFullScreen=""
           loading="lazy"
         />
       </div>
@@ -91,7 +89,6 @@ const Contact = () => {
                   <div className="flex items-start">
                     <div className="shrink-0">
                       <div className="inline-block rounded-md bg-sky-200 p-4 text-primary text-black">
-                        
                         <ChatBubbleOvalLeftEllipsisIcon className="h-8 w-8 text-black" />
                       </div>
                     </div>
