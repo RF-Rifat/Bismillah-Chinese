@@ -12,6 +12,7 @@ import {
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Image from "next/image";
+import Cart from "../cart/cart";
 
 function NavList() {
   return (
@@ -76,7 +77,7 @@ export function NavbarSimple() {
   }, []);
 
   return (
-    <Navbar className="mx-auto max-w-screen-2xl px-4 py-2 rounded-md bg-transparent opacity-100">
+    <Navbar className="mx-auto max-w-screen-2xl px-4 py-2 rounded-md bg-[#EAF7E3] opacity-100 shadow-none border-none">
       <div className="flex items-center justify-between text-blue-gray-900">
         <Link href={"/"} className="mr-4 cursor-pointer py-1.5">
           <Image
@@ -101,6 +102,9 @@ export function NavbarSimple() {
             <Bars3Icon className="h-7 w-7" strokeWidth={2} />
           )}
         </IconButton>
+        <div className="hidden lg:block">
+          <Cart />
+        </div>
       </div>
       <Collapse open={openNav}>
         <NavList />
