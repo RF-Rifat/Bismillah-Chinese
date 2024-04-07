@@ -1,6 +1,6 @@
 import FoodCard from "../Shared/FoodCard";
 import FoodCardTitle from "../Shared/FoodCardTitle";
-import useGetData from "@/data/getData";
+import useGetData from "@/hooks/getData";
 
 const LatestFood = () => {
   const [foodData, refetch, isPending] = useGetData("/api/food");
