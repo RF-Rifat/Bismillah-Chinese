@@ -11,7 +11,7 @@ const Cart = () => {
         content="5"
         withBorder
       >
-        <HiMiniShoppingBag className="h-7 w-7 text-blue-600" />
+        <HiMiniShoppingBag className="h-7 w-7" />
       </Badge>
     </>
   );
