@@ -14,11 +14,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 function NavList() {
-  const navItem = [
-    { name: "Home", href: "/" },
-    { name: "Menu", href: "/menu" },
-    { name: "Contact", href: "/contact" },
-  ];
   return (
     <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       <Tabs value="Home" className="lg:flex">
@@ -31,7 +26,7 @@ function NavList() {
             className="bg-transparent"
           >
             <Tab value="Home">
-              <h2 className="text-lg font-semibold px-4 py-2">Home</h2>
+              <h2 className="text-lg font-semibold px-2 py-1">Home</h2>
             </Tab>
           </TabsHeader>
         </Link>
@@ -69,7 +64,7 @@ export function NavbarSimple() {
   }, []);
 
   return (
-    <Navbar className="mx-auto max-w-screen-2xl px-4 py-3 rounded-md bg-transparent">
+    <Navbar className="mx-auto max-w-screen-2xl px-4 py-2 rounded-md bg-transparent opacity-100">
       <div className="flex items-center justify-between text-blue-gray-900">
         <Link href={"/"} className="mr-4 cursor-pointer py-1.5">
           <Image
@@ -89,9 +84,9 @@ export function NavbarSimple() {
           onClick={() => setOpenNav(!openNav)}
         >
           {openNav ? (
-            <XMarkIcon className="h-8 w-8" strokeWidth={2} />
+            <XMarkIcon className="h-7 w-7" strokeWidth={2} />
           ) : (
-            <Bars3Icon className="h-8 w-8" strokeWidth={2} />
+            <Bars3Icon className="h-7 w-7" strokeWidth={2} />
           )}
         </IconButton>
       </div>
