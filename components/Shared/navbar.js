@@ -31,16 +31,28 @@ function NavList() {
           </TabsHeader>
         </Link>
         <Link href={"/menu"}>
-          <TabsHeader className="bg-transparent">
+          <TabsHeader
+            className="bg-transparent"
+            indicatorProps={{
+              className:
+                "border-b-2 border-gray-900 shadow-none !text-gray-900 rounded-md bg-gray-900/10",
+            }}
+          >
             <Tab value="Menu">
-              <h2 className="text-lg font-semibold px-4 py-2">Menu</h2>
+              <h2 className="text-lg font-semibold px-2 py-1">Menu</h2>
             </Tab>
           </TabsHeader>
         </Link>
         <Link href={"/contact"}>
-          <TabsHeader className="bg-transparent">
+          <TabsHeader
+            className="bg-transparent"
+            indicatorProps={{
+              className:
+                "border-b-2 border-gray-900 shadow-none !text-gray-900 rounded-md bg-gray-900/10",
+            }}
+          >
             <Tab value="Contact">
-              <h2 className="text-lg font-semibold px-4 py-2">Contact</h2>
+              <h2 className="text-lg font-semibold px-2 py-1">Contact</h2>
             </Tab>
           </TabsHeader>
         </Link>

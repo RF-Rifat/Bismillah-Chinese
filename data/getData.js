@@ -1,6 +1,7 @@
+"use client";
 import { useQuery } from "@tanstack/react-query";
 
-const useGetUserData = (endpoint) => {
+const useGetData = (endpoint) => {
   const {
     isPending,
     data = [],
@@ -15,4 +16,4 @@ const useGetUserData = (endpoint) => {
   return [data, refetch, isPending];
 };
 
-export default useGetUserData;
+export default useGetData;

@@ -1,9 +1,14 @@
-import { FoodMenu } from "./foodMenu";
-
+/* eslint-disable react-hooks/rules-of-hooks */
+"use client";
+import MenuHeader from "@/components/Menu/MenuHeader";
+import useGetData from "@/data/getData";
 const page = () => {
+  const [foodData, refetch, isPending] = useGetData("/api/food");
+  console.log(foodData);
   return (
     <>
-      <FoodMenu />
+      <MenuHeader />
+      {/* <FoodMenu /> */}
     </>
   );
 };

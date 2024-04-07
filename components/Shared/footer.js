@@ -121,7 +121,7 @@ const Footer = () => {
                   <a href="https://www.facebook.com/people/%E0%A6%AC%E0%A6%BF%E0%A6%B8%E0%A6%AE%E0%A6%BF%E0%A6%B2%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B9%E0%A7%8D-%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A6%A8%E0%A6%BF%E0%A6%9C-%E0%A6%B0%E0%A7%87%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A7%81%E0%A6%B0%E0%A7%87%E0%A6%A8%E0%A7%8D%E0%A6%9F-Beautiful-Service-is-Our-Dream/100083517151611/">
                     <FaFacebook className="h-10 w-10 text-light-blue-600" />
                   </a>
-                  <a href="abc">
+                  <a href="https://wa.me/+918653328774">
                     <FaWhatsapp className="h-10 w-10 text-green-600" />
                   </a>
                   <a href="mailto:info@bismillahchinese.com">

@@ -116,7 +116,6 @@ export function FoodMenu() {
         className="my-6"
         id="custom-animation"
         orientation={resTab ? "vertical" : "horizontal"}
-        // orientation={"vertical"}
         color="green"
       >
         <div className="my-2 !sticky !top-2">

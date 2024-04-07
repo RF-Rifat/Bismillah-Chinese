@@ -1,10 +1,9 @@
-import { useEffect, useState } from "react";
 import FoodCard from "../Shared/FoodCard";
 import FoodCardTitle from "../Shared/FoodCardTitle";
-import useGetUserData from "@/data/getData";
+import useGetData from "@/data/getData";
 
 const LatestFood = () => {
-  const [foodData, refetch, isPending] = useGetUserData("/api/food");
+  const [foodData, refetch, isPending] = useGetData("/api/food");
 
   console.log(foodData);
   const cardData = [
