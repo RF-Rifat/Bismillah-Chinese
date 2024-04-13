@@ -107,6 +107,11 @@ export function FoodMenu() {
       value: "ইফতার",
       desc: <LatestFood />,
     },
+    {
+      label: "ইফতার",
+      value: "ইফতার",
+      desc: <LatestFood />,
+    },
   ];
 
   return (
