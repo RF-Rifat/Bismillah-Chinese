@@ -7,7 +7,7 @@ const useGetData = (endpoint) => {
     data = [],
     refetch,
   } = useQuery({
-    queryKey: ["data"],
+    queryKey: ["data", endpoint],
     queryFn: () =>
       fetch(
         "https://bismillah-chiness-dashboard-server.vercel.app" + endpoint
