@@ -1,14 +1,16 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 "use client";
 import MenuHeader from "@/components/Menu/MenuHeader";
-import useGetData from "@/hooks/getData";
+import { FoodMenu } from "./foodMenu";
+import useAxios from "@/hooks/useAxios";
 const page = () => {
-  const [foodData, refetch, isPending] = useGetData("/api/food");
-  console.log(foodData);
+  const [category, isLoading, setResData] = useAxios("/api/category");
   return (
     <>
-      <MenuHeader />
-      {/* <FoodMenu /> */}
+      <div className="flex justify-center">
+        <MenuHeader category={category} isLoading={isLoading} />
+      </div>
+      <FoodMenu />
     </>
   );
 };
