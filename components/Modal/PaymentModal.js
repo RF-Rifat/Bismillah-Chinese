@@ -17,7 +17,6 @@ const PaymentModal = ({ cartItems }) => {
     (acc, curr) => acc + curr.price * curr.quantity,
     0
   );
-  console.log(aggregatedCartItems, totalPrice);
   useEffect(() => {
     if (openModal) {
       document.body.style.overflow = "hidden";

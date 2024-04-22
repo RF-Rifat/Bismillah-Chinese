@@ -1,5 +1,4 @@
 "use client";
-import { HiMiniShoppingBag } from "react-icons/hi2";
 import { Badge } from "@material-tailwind/react";
 import useCartStore from "@/Store/cartStore";
 import PaymentModal from "../Modal/PaymentModal";
