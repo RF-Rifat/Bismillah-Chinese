@@ -4,10 +4,16 @@ import MenuHeader from "@/components/Menu/MenuHeader";
 import { FoodMenu } from "./foodMenu";
 import useAxios from "@/hooks/useAxios";
 import { useState } from "react";
-const page = () => {
+
+const Page = () => {
   const [activeButton, setActiveButton] = useState(null);
   const [category, isLoading] = useAxios("/api/category");
   const [foodData] = useAxios("/api/food");
+
+  const filteredFoodData = activeButton
+    ? foodData.filter((food) => food.category === activeButton)
+    : foodData;
+
   return (
     <>
       <div className="flex justify-center">
@@ -18,9 +24,9 @@ const page = () => {
           activeButton={activeButton}
         />
       </div>
-      <FoodMenu foodData={foodData} />
+      <FoodMenu foodData={filteredFoodData} />
     </>
   );
 };
 
-export default page;
+export default Page;

@@ -26,11 +26,6 @@ const MenuHeader = ({ category, isLoading, setActiveButton, activeButton }) => {
   if (isLoading) {
     return <div>Loading...</div>;
   }
-
-  const handleButtonClick = (_id) => {
-    setActiveButton(_id);
-  };
-
   return (
     <div
       ref={menuRef}
@@ -45,7 +40,7 @@ const MenuHeader = ({ category, isLoading, setActiveButton, activeButton }) => {
             className={`flex justify-center py-3 px-4 relative top-[0px] hover:text-amber-400 transition delay-100 duration-200 border-[1.5px] ease-in-out border-y-teal-300 border-b-teal-300 border-x-teal-300 bg-white rounded-s-md shadow lg:text-xl ${
               activeButton === null && "bg-teal-200"
             }`}
-            onClick={() => handleButtonClick(null)}
+            onClick={() => setActiveButton(null)}
           >
             সব
           </button>
@@ -60,7 +55,7 @@ const MenuHeader = ({ category, isLoading, setActiveButton, activeButton }) => {
               className={`flex justify-center py-3 px-4 relative top-[0px] hover:text-amber-400 transition delay-100 duration-200 border-[1.5px] ease-in-out border-y-teal-300 border-b-teal-300 border-x-teal-300 bg-white shadow whitespace-nowrap lg:text-xl ${
                 activeButton === null && "bg-teal-200"
               }`}
-              onClick={() => handleButtonClick(_id)}
+              onClick={() => setActiveButton(name)}
             >
               {name}
             </button>
