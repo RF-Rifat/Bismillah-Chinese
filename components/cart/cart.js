@@ -12,7 +12,9 @@ const Cart = () => {
   return (
     <>
       <Badge
-        className={`${totalQuantity > 0 && "animate-pulse"} z-50 cursor-pointer`}
+        className={`${
+          totalQuantity > 0 && "animate-pulse"
+        } z-50 cursor-pointer`}
         color="green"
         content={totalQuantity}
         withBorder
