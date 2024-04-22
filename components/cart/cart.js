@@ -5,6 +5,7 @@ import PaymentModal from "../Modal/PaymentModal";
 
 const Cart = () => {
   const cartItems = useCartStore((state) => state.cartItems);
+  console.log(cartItems);
   return (
     <>
       <Badge
