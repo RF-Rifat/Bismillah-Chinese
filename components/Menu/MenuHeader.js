@@ -1,7 +1,6 @@
 import { useState, useRef } from "react";
 
-const MenuHeader = ({ category, isLoading }) => {
-  const [activeButton, setActiveButton] = useState(null);
+const MenuHeader = ({ category, isLoading, setActiveButton, activeButton }) => {
   const menuRef = useRef(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
