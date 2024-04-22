@@ -20,8 +20,8 @@ const Footer = () => {
   return (
     <>
       <footer className="relative z-10 pb-10 pt-20 dark:bg-dark lg:pb-10 lg:pt-[120px]">
-        <div className="container">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-around gap-4 items-center md:items-start">
+        <div>
+          <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-around gap-4 items-center md:items-start">
             <div className="px-4">
               <div className="mb-10 w-full mx-auto">
                 <Link href="/" className="mb-4 flex justify-center">
@@ -46,7 +46,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="grid justify-center space-y-8">
+            <div className="grid justify-center space-y-2">
               <h2 className="font-semibold text-center text-lg mb-3 border-b-4 border-red-700 rounded w-fit">
                 খোলার সময়
               </h2>
@@ -58,7 +58,7 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div className="grid justify-center space-y-10">
+            <div className="grid justify-center space-y-2">
               <h2 className="font-semibold text-lg mb-3 border-b-4 border-red-700 rounded w-fit">
                 দ্রুত লিঙ্ক
               </h2>
@@ -112,7 +112,7 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div className="grid justify-center px-4 space-y-10 lg:col-span-3 xl:col-span-1">
+            <div className="grid justify-center px-4 space-y-2 lg:col-span-3 xl:col-span-1">
               <div className="mb-10 w-full">
                 <h4 className="mb-9 text-lg font-semibold text-dark dark:text-white border-b-4 border-red-700 rounded w-fit">
                   আরও তথ্যের জন্য এখানে যান
