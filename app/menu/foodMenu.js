@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import React from "react";
 import {
@@ -8,14 +9,20 @@ import {
   TabPanel,
   Button,
   Collapse,
+  CardFooter,
+  Typography,
+  CardBody,
+  Card,
+  CardHeader,
 } from "@material-tailwind/react";
 import FoodCard from "@/components/Shared/FoodCard";
 import LatestFood from "@/components/home/latestFood";
 import MenuFoodCard from "./menuFoodCard";
 import { useMediaQuery } from "react-responsive";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
-export function FoodMenu() {
+export function FoodMenu({ foodData }) {
   const [resTab, setResTab] = useState(true);
   const smallDevice = useMediaQuery({
     query: "(min-width: 900px)",
@@ -116,35 +123,46 @@ export function FoodMenu() {
 
   return (
     <>
-      <Tabs
-        value="all"
-        className="my-6"
-        id="custom-animation"
-        orientation={resTab ? "vertical" : "horizontal"}
-        color="green"
-      >
-        <div className="my-2 !sticky !top-2">
-          <TabsHeader className="sticky top-0 transition-all duration-150">
-            {data.map(({ label, value }) => (
-              <Tab
-                className="p-2 md:p-6 inline-block"
-                key={value}
-                value={value}
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 justify-center items-center gap-6">
+        {foodData?.map((cardData) => (
+          <Card key={cardData?._id} className="bg-[#C1F0C1]">
+            <CardHeader shadow={false} floated={false} className="h-60">
+              <img
+                src={cardData?.imageSrc}
+                alt="card-image"
+                className="h-full w-full object-cover"
+                loading="lazy"
+                fill
+                style={{
+                  objectFit: "fill",
+                }}
+              />
+            </CardHeader>
+            <CardBody>
+              <div className="mb-2 flex items-center justify-between">
+                <Typography color="blue-gray" className="font-medium">
+                  {cardData?.title}
+                </Typography>
+                <Typography color="blue-gray" className="font-medium">
+                  95.00
+                </Typography>
+              </div>
+              <Typography
+                variant="small"
+                color="gray"
+                className="font-normal opacity-75"
               >
-                {label} - 10
-              </Tab>
-            ))}
-          </TabsHeader>
-        </div>
-
-        <TabsBody>
-          {data.map(({ value, desc }) => (
-            <TabPanel key={value} value={value} className="py-0">
-              {desc}
-            </TabPanel>
-          ))}
-        </TabsBody>
-      </Tabs>{" "}
+                {cardData?.category}
+              </Typography>
+            </CardBody>
+            <CardFooter className="pt-0">
+              <Button color="green" className="flex items-center gap-3">
+                বিস্তারিত দেখুন
+              </Button>
+            </CardFooter>
+          </Card>
+        ))}
+      </div>
     </>
   );
 }
