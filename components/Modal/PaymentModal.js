@@ -30,7 +30,7 @@ const PaymentModal = ({ cartItems }) => {
     <div className="mx-auto flex items-center justify-center">
       <HiMiniShoppingBag
         onClick={() => setOpenModal(true)}
-        className="h-7 w-7"
+        className="size-8 cursor-pointer"
       />
       <div
         className={`fixed flex justify-center items-center z-[100] ${
@@ -75,7 +75,7 @@ const PaymentModal = ({ cartItems }) => {
                       </div>
                       <div className="flex justify-between">
                         <span>Product 3</span>
-                        <span>$29.99</span>
+                        <span>{totalPrice} TK</span>
                       </div>
                       <div className="border-t border-gray-200  mt-4 pt-4 flex justify-between font-semibold">
                         <span>Total</span>
@@ -86,46 +86,6 @@ const PaymentModal = ({ cartItems }) => {
                 </div>
               </div>
               <div className="space-y-8 lg:mb-6">
-                <div className="rounded-lg border bg-card text-card-foreground shadow-sm">
-                  <div className="flex flex-col space-y-1.5 lg:p-6 p-2">
-                    <h3 className="text-2xl font-semibold whitespace-nowrap">
-                      Shipping Details
-                    </h3>
-                  </div>
-                  <div className="lg:p-6 p-2">
-                    {/* Shipping Details form */}
-                    <form className="space-y-4">
-                      <div className="space-y-2">
-                        <label className="text-sm font-medium">Name</label>
-                        <input
-                          className="bg-transparent flex h-10 w-full rounded-md border px-3"
-                          placeholder="Enter your name"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <label className="text-sm font-medium">Address</label>
-                        <input
-                          className="bg-transparent flex h-10 w-full rounded-md border px-3"
-                          placeholder="Enter your address"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <label className="text-sm font-medium">City</label>
-                        <input
-                          className="bg-transparent flex h-10 w-full rounded-md border px-3"
-                          placeholder="Enter your city"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <label className="text-sm font-medium">Country</label>
-                        <input
-                          className="bg-transparent flex h-10 w-full rounded-md border px-3"
-                          placeholder="Enter your country"
-                        />
-                      </div>
-                    </form>
-                  </div>
-                </div>
                 <div className="rounded-lg border bg-card  shadow-sm ">
                   <div className="flex flex-col space-y-1.5 lg:p-6 p-2">
                     <h3 className="text-2xl font-semibold whitespace-nowrap">
