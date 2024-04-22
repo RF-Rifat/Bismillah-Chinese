@@ -30,7 +30,7 @@ export function FoodMenu({ foodData }) {
               <img
                 src={cardData.imageSrc}
                 alt="card-image"
-                className="h-full w-full object-cover"
+                className="h-60 w-full object-cover"
                 loading="lazy"
                 style={{
                   objectFit: "fill",
@@ -41,8 +41,7 @@ export function FoodMenu({ foodData }) {
               <div className="mb-2 flex items-center justify-between">
                 <Typography
                   variant="small"
-                  color="gray"
-                  className="font-normal opacity-75"
+                  className="font-normal opacity-90"
                 >
                   {cardData.category}
                 </Typography>
@@ -51,7 +50,7 @@ export function FoodMenu({ foodData }) {
                 </Typography>
               </div>
 
-              <Typography color="blue-gray" className="font-medium">
+              <Typography color="blue-gray" className="font-medium h-10">
                 {cardData.title}
               </Typography>
             </CardBody>

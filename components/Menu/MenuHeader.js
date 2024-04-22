@@ -37,7 +37,7 @@ const MenuHeader = ({ category, isLoading, setActiveButton, activeButton }) => {
       <ul className="flex justify-around lg:justify-center w-fit items-center text-base font-normal px-2 my-1 bg-blue-gray-50 pl-2 pr-6 lg:px-2 rounded-e">
         <li>
           <button
-            className={`flex justify-center py-3 px-4 relative top-[0px] hover:text-amber-400 transition delay-100 duration-200 border-[1.5px] ease-in-out border-y-teal-300 border-b-teal-300 border-x-teal-300 bg-white rounded-s-md shadow lg:text-xl ${
+            className={`flex justify-center py-3 px-4 relative top-[0px] hover:text-amber-400 transition delay-100 duration-200 border-[1.5px] ease-in-out border-y-teal-300 border-b-teal-300 border-x-teal-300 rounded-s-md shadow lg:text-xl ${
               activeButton === null && "bg-teal-200"
             }`}
             onClick={() => setActiveButton(null)}
@@ -53,7 +53,7 @@ const MenuHeader = ({ category, isLoading, setActiveButton, activeButton }) => {
                   activeButton === _id ? "#E5E7EB !important" : "inherit",
               }}
               className={`flex justify-center py-3 px-4 relative top-[0px] hover:text-amber-400 transition delay-100 duration-200 border-[1.5px] ease-in-out border-y-teal-300 border-b-teal-300 border-x-teal-300 bg-white shadow whitespace-nowrap lg:text-xl ${
-                activeButton === null && "bg-teal-200"
+                activeButton === _id && "bg-teal-200"
               }`}
               onClick={() => setActiveButton(name)}
             >
