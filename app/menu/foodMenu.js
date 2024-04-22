@@ -9,13 +9,16 @@ import {
   Card,
   CardHeader,
 } from "@material-tailwind/react";
+import { FaCartPlus } from "react-icons/fa";
+import useCartStore from "@/Store/cartStore";
 
 export function FoodMenu({ foodData }) {
+  const addToCart = useCartStore((state) => state.addToCart);
   if (!foodData || foodData.length === 0) {
     return (
       <div className="flex justify-center items-center h-64">
         <Typography color="gray" className="font-medium text-xl">
-           Not Available At the Moment
+          Not Available At the Moment
         </Typography>
       </div>
     );
@@ -30,7 +33,7 @@ export function FoodMenu({ foodData }) {
               <img
                 src={cardData.imageSrc}
                 alt="card-image"
-                className="h-60 w-full object-cover"
+                className="h-full w-full object-cover"
                 loading="lazy"
                 style={{
                   objectFit: "fill",
@@ -39,10 +42,7 @@ export function FoodMenu({ foodData }) {
             </CardHeader>
             <CardBody>
               <div className="mb-2 flex items-center justify-between">
-                <Typography
-                  variant="small"
-                  className="font-normal opacity-90"
-                >
+                <Typography variant="small" className="font-normal opacity-90">
                   {cardData.category}
                 </Typography>
                 <Typography color="blue-gray" className="font-medium">
@@ -55,8 +55,12 @@ export function FoodMenu({ foodData }) {
               </Typography>
             </CardBody>
             <CardFooter className="pt-0">
-              <Button color="green" className="flex items-center gap-3">
-                বিস্তারিত দেখুন
+              <Button
+                onClick={() => addToCart(cardData)}
+                color="green"
+                className="flex items-center gap-3 text-sm"
+              >
+                কার্টে যোগ করুন <FaCartPlus className="size-4" />
               </Button>
             </CardFooter>
           </Card>
