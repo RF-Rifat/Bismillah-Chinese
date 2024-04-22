@@ -5,13 +5,16 @@ import PaymentModal from "../Modal/PaymentModal";
 
 const Cart = () => {
   const cartItems = useCartStore((state) => state.cartItems);
-  console.log(cartItems);
+  const totalQuantity = cartItems.reduce(
+    (total, item) => total + item.quantity,
+    0
+  );
   return (
     <>
       <Badge
-        className={`${cartItems.length > 0 && "animate-pulse"} z-50`}
+        className={`${totalQuantity.length > 0 && "animate-pulse"} z-50`}
         color="green"
-        content={cartItems.length}
+        content={totalQuantity}
         withBorder
       >
         <PaymentModal cartItems={cartItems} />
