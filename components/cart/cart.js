@@ -2,10 +2,10 @@
 import { HiMiniShoppingBag } from "react-icons/hi2";
 import { Badge } from "@material-tailwind/react";
 import useCartStore from "@/Store/cartStore";
+import PaymentModal from "../Modal/PaymentModal";
 
 const Cart = () => {
   const cartItems = useCartStore((state) => state.cartItems);
-  console.log(cartItems);
   return (
     <>
       <Badge
@@ -14,7 +14,7 @@ const Cart = () => {
         content={cartItems.length}
         withBorder
       >
-        <HiMiniShoppingBag className="h-7 w-7" />
+        <PaymentModal cartItems={cartItems} />
       </Badge>
     </>
   );

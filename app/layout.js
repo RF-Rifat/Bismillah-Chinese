@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
           <NavbarSimple />
           <div className="px-2 lg:px-6 relative">
             {children}
-            <div className="fixed top-36 right-4 z-50 lg:hidden">
+            <div className="fixed top-36 right-4 z-50">
               <Cart />
             </div>
             <a href="tel:+918653328774" className="fixed bottom-4 left-4 z-50">
