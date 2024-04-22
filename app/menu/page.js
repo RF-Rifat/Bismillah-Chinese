@@ -6,7 +6,6 @@ import useAxios from "@/hooks/useAxios";
 const page = () => {
   const [category, isLoading, setResData] = useAxios("/api/category");
   const [foodData] = useAxios("/api/food");
-  console.log(foodData);
   return (
     <>
       <div className="flex justify-center">

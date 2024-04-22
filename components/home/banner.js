@@ -22,7 +22,7 @@ const BannerSwiper = () => {
     "/image/banner4.png",
   ];
   return (
-    <div className="2xl:flex px-6 justify-between lg:my-10 gap-6 max-w-screen-2xl mx-auto p-4">
+    <div className="2xl:flex justify-between lg:my-10 gap-6 max-w-screen-2xl mx-auto">
       <div className="grid py-6 lg:py-24 items-center space-y-6 text-center 2xl:text-left 2xl:w-1/2">
         <h4 className="text-3xl lg:text-6xl text-green-500 font-semibold">
           ১০০% হালাল খাবার
