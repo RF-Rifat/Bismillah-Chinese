@@ -34,6 +34,16 @@ const useCartStore = create((set) => ({
       return { cartItems: newCartItems };
     });
   },
+  increaseQuantity: (itemId) => {
+    set((state) => {
+      const newCartItems = state.cartItems.map((item) =>
+        item._id === itemId
+          ? { ...item, quantity: (item.quantity || 0) + 1 }
+          : item
+      );
+      return { cartItems: newCartItems };
+    });
+  },
   clearCart: () => set({ cartItems: [] }),
 }));
 

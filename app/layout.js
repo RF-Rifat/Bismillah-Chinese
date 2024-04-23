@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
             <div className="fixed top-36 right-4 z-50">
               <Cart />
             </div>
-            <a href="tel:+918653328774" className="fixed bottom-4 left-4 z-50">
+            <a href="tel:+918653328774" className="fixed bottom-4 left-4 z-30">
               <BiSolidPhoneCall className="size-9 hover:animate-pulse text-blue-600" />
             </a>
             <Footer />
