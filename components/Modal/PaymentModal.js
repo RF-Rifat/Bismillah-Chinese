@@ -112,7 +112,7 @@ const PaymentModal = ({ cartItems }) => {
                                 setOpenModal(false);
                               }}
                               type="button"
-                              className="rounded-md px-4 py-1 w-full text-sm font-semibold bg-transparent bg-gray-100 border-2 text-[#333]"
+                              className="rounded-md px-4 py-1 w-full text-sm font-semibold bg-transparent bg-gray-100 border-2 text-white"
                             >
                               Cancel
                             </button>
