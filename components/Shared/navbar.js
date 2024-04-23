@@ -102,9 +102,9 @@ export function NavbarSimple() {
             <Bars3Icon className="h-7 w-7" strokeWidth={2} />
           )}
         </IconButton>
-        <div className="hidden lg:block">
+        {/* <div className="hidden lg:block">
           <Cart />
-        </div>
+        </div> */}
       </div>
       <Collapse open={openNav}>
         <NavList />

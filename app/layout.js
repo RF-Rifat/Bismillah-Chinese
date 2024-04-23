@@ -6,6 +6,7 @@ import Providers from "@/lib/React-Query/Query-Provider";
 import { NavbarSimple } from "@/components/Shared/navbar";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import Cart from "@/components/cart/cart";
+import { Toaster } from "react-hot-toast";
 
 const latin = Inter({ subsets: ["latin"] });
 
@@ -39,6 +40,7 @@ export default function RootLayout({ children }) {
             </a>
             <Footer />
           </div>
+          <Toaster position="top-center" reverseOrder={false} />
         </Providers>
       </body>
     </html>

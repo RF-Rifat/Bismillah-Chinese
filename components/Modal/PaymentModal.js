@@ -6,6 +6,7 @@ import PaymentForm from "./PaymentForm";
 import useCartStore from "@/Store/cartStore";
 import axios from "axios";
 import { BASE_URL } from "@/hooks/useAxios";
+import toast from "react-hot-toast";
 
 const PaymentModal = ({ cartItems }) => {
   const [openModal, setOpenModal] = useState(false);
@@ -58,6 +59,7 @@ const PaymentModal = ({ cartItems }) => {
       console.log("Response from backend:", response.data);
       setOpenModal(false);
       clearCart();
+      toast.success("Order Successful!");
     } catch (error) {
       console.error("Error sending data to backend:", error);
     }
