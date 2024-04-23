@@ -54,7 +54,7 @@ const PaymentModal = ({ cartItems }) => {
         formData,
         cartData: cartItems,
         totalPrice,
-        status: pending,
+        status: "pending",
       };
       const response = await axios.post(`${BASE_URL}/api/order`, dataToSend);
       console.log("Response from backend:", response.data);
