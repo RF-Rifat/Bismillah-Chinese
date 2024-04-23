@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-export const BASE_URL = "http://localhost:5000";
-// export const BASE_URL = "https://bismillah-chiness-dashboard-server.vercel.app";
+// export const BASE_URL = "http://localhost:5000";
+export const BASE_URL = "https://bismillah-chiness-dashboard-server.vercel.app";
 const useAxios = (endpoint, query) => {
   const [resData, setResData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
