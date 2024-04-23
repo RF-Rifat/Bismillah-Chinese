@@ -51,7 +51,7 @@ const PaymentModal = ({ cartItems }) => {
     try {
       const totalPrice = calculateTotal(cartItems);
       const dataToSend = {
-        formData,
+        user: formData,
         cartData: cartItems,
         totalPrice,
         status: "pending",
