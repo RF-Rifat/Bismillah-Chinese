@@ -12,11 +12,17 @@ const latin = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   manifest: "/manifest.json",
-  title: "বিসমিল্লাহ চাইনিজ রেস্টুরেন্ট | গাইবান্ধা রেস্টুরেন্ট",
+  title:
+    "বিসমিল্লাহ চাইনিজ রেস্টুরেন্ট গাইবান্ধা | খাবার মেনু তালিকা (Bismilah Chinese Restaurant - Food Menu)",
   description:
-    "গাইবান্ধায় গেষ্টদের প্রতিটি অনুষ্ঠানের জন্য তাজা ও গরম খাবার দ্রুত সুবিধাজনক কম খরচে পৌঁছাতে চেষ্টা করি।",
+    "**Experience authentic Chinese cuisine in Gaibandha!**  বিসমিল্লাহ চাইনিজ রেস্টুরেন্টে আমরা আপনাকে তাজা, সুস্বাদু, এবং সাশ্রয়ী মূল্যের চাইনিজ খাবার সরবরাহ করি। আমাদের মেনুতে বিভিন্ন ধরণের জনপ্রিয় চাইনিজ খাবার রয়েছে, যা আপনার প্রতিটি খাবারের অভিজ্ঞতাকে বিশেষ করে তুলবে। (**Experience authentic Chinese cuisine in Gaibandha!** At Bismilah Chinese Restaurant, we serve fresh, delicious, and affordable Chinese food. Our menu features a variety of popular Chinese dishes that will make every dining experience special.)",
+  keywords:
+    "Bismilah Chinese Restaurant, Gaibandha, Chinese food, Bangladeshi food, menu, delivery , 100% হালাল খাবার",
 };
-
+const seoMetaTags = [
+  { name: "description", content: metadata.description },
+  { name: "keywords", content: metadata.keywords },
+];
 export default function RootLayout({ children }) {
   return (
     <html
@@ -26,6 +32,11 @@ export default function RootLayout({ children }) {
     >
       <head>
         <link rel="shortcut icon" href="/image/logo.png" type="image/png" />
+        <title>{metadata.title}</title>
+        {seoMetaTags.map((tag) => (
+          <meta key={tag.name} name={tag.name} content={tag.content} />
+        ))}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body className={`max-w-screen-2xl mx-auto ${latin.className}`}>
         <Providers>
