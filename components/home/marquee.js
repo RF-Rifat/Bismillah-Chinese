@@ -10,6 +10,13 @@ const BannerMarquee = () => {
             className="text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold mr-4 py-4"
             style={{ color: "#008080" }}
           >
+            আমাদের এখানে জন্মদিন, সেমিনার, মেয়ে দেখা(পাকা দেখা), আকিকা, শুভবিবাহ
+            ও ম্যারেজডে সহ ছোট বড় সব ধরনের অনুষ্ঠান এর ব্যবস্থা করা হয়।
+          </h2>
+          <h2
+            className="text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold mr-4 py-4"
+            style={{ color: "#008080" }}
+          >
             আমাদের মেনুতে আপনি সব ধরণের সুস্বাদু এবং আকর্ষণীয় খাবার পাবেন সঠীক
             দামে।
           </h2>
