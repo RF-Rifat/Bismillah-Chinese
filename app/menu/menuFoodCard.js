@@ -12,41 +12,45 @@ import { EyeIcon } from "@heroicons/react/24/outline";
 
 const MenuFoodCard = ({ cardData }) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-center items-center gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-center items-center gap-8">
       {cardData?.map((cardData) => (
-        <Card key={cardData.id} className="bg-[#C1F0C1]">
-          <CardHeader shadow={false} floated={false} className="h-60">
+        <Card
+          key={cardData.id}
+          className="bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300 ease-in-out"
+        >
+          <CardHeader
+            shadow={false}
+            floated={false}
+            className="h-60 relative overflow-hidden rounded-t-lg"
+          >
             <Image
               src={cardData?.imageSrc}
               alt="card-image"
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-105"
               loading="lazy"
               fill
-              style={{
-                objectFit: "fill",
-              }}
             />
           </CardHeader>
-          <CardBody>
-            <div className="mb-2 flex items-center justify-between">
-              <Typography color="blue-gray" className="font-medium">
+          <CardBody className="px-6 py-4">
+            <div className="mb-3 flex items-center justify-between">
+              <Typography color="blue-gray" className="font-semibold text-lg">
                 {cardData?.title}
               </Typography>
-              <Typography color="blue-gray" className="font-medium">
-                95.00
+              <Typography color="green" className="font-bold text-lg">
+                $95
               </Typography>
             </div>
             <Typography
               variant="small"
               color="gray"
-              className="font-normal opacity-75"
+              className="font-normal opacity-80 text-justify"
             >
               {cardData?.description}
             </Typography>
           </CardBody>
-          <CardFooter className="pt-0">
-            <Button color="green" className="flex items-center gap-3">
-               বিস্তারিত দেখুন
+          <CardFooter className="px-6 py-4 pt-2">
+            <Button className="w-full bg-gradient-to-r from-green-400 to-green-600 text-white flex items-center justify-center gap-2 hover:from-green-500 hover:to-green-700 transition-all duration-300">
+              <EyeIcon className="h-5 w-5" /> বিস্তারিত দেখুন
             </Button>
           </CardFooter>
         </Card>

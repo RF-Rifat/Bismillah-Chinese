@@ -105,18 +105,18 @@ const PaymentModal = ({ cartItems }) => {
                       <div className="mb-14 lg:mb-0">
                         {cartItems.length === 0 ? (
                           <>
-                            <p className="text-white my-4 text-xl">
-                              No items in the cart.
-                            </p>
-                            <button
-                              onClick={() => {
-                                setOpenModal(false);
-                              }}
-                              type="button"
-                              className="rounded-md px-4 py-1 w-full text-sm font-semibold bg-transparent bg-gray-100 border-2 text-white"
-                            >
-                              Cancel
-                            </button>
+                            <div className="flex flex-col items-center pt-6">
+                              <p className="text-gray-300 text-lg mb-4">
+                                Your cart is currently empty.
+                              </p>
+                              <button
+                                onClick={() => setOpenModal(false)}
+                                type="button"
+                                className="rounded-full px-6 py-2 w-full text-sm font-semibold bg-gray-100 text-gray-800 hover:bg-gray-200 transition-colors"
+                              >
+                                Close
+                              </button>
+                            </div>
                           </>
                         ) : (
                           cartItems.map((cardData) => (
@@ -163,7 +163,8 @@ const PaymentModal = ({ cartItems }) => {
                                         {(
                                           parseFloat(cardData?.price) *
                                           cardData?.quantity
-                                        ).toFixed(2)}
+                                        ).toFixed(2)}{" "}
+                                        টাকা
                                       </span>
                                     </li>
                                   </ul>
@@ -185,7 +186,7 @@ const PaymentModal = ({ cartItems }) => {
                         <h4 className="flex flex-wrap gap-4 text-base text-white">
                           Total :
                           <span className="ml-auto">
-                            {calculateTotal(cartItems)}
+                            {calculateTotal(cartItems)} টাকা
                           </span>
                         </h4>
                       </div>

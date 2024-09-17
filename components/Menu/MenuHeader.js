@@ -26,19 +26,22 @@ const MenuHeader = ({ category, isLoading, setActiveButton, activeButton }) => {
   if (isLoading) {
     return <div>Loading...</div>;
   }
+
   return (
     <div
       ref={menuRef}
-      className="overflow-x-auto my-2"
+      className="overflow-x-auto my-4 p-2 bg-white rounded-lg shadow-lg"
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
       onMouseMove={handleMouseMove}
     >
-      <ul className="flex justify-around lg:justify-center w-fit items-center text-base font-normal px-2 my-1 bg-blue-gray-50 pl-2 pr-6 lg:px-2 rounded-e">
+      <ul className="flex justify-start lg:justify-center space-x-3 w-fit items-center text-base font-medium px-4 bg-gray-50 rounded-lg">
         <li>
           <button
-            className={`flex justify-center py-3 px-4 relative top-[0px] hover:text-amber-400 transition delay-100 duration-200 border-[1.5px] ease-in-out border-y-teal-300 border-b-teal-300 border-x-teal-300 rounded-s-md shadow lg:text-xl ${
-              activeButton === null && "bg-teal-200"
+            className={`py-2 px-5 rounded-lg transition-colors duration-300 ${
+              activeButton === null
+                ? "bg-teal-500 text-white"
+                : "bg-gray-200 text-gray-700 hover:bg-teal-100"
             }`}
             onClick={() => setActiveButton(null)}
           >
@@ -48,12 +51,10 @@ const MenuHeader = ({ category, isLoading, setActiveButton, activeButton }) => {
         {category.map(({ _id, name }) => (
           <li key={_id}>
             <button
-              style={{
-                backgroundColor:
-                  activeButton === _id ? "#E5E7EB !important" : "inherit",
-              }}
-              className={`flex justify-center py-3 px-4 relative top-[0px] hover:text-amber-400 transition delay-100 duration-200 border-[1.5px] ease-in-out border-y-teal-300 border-b-teal-300 border-x-teal-300 bg-white shadow whitespace-nowrap lg:text-xl ${
-                activeButton === _id && "bg-teal-200"
+              className={`py-2 px-5 rounded-lg transition-colors duration-300 whitespace-nowrap ${
+                activeButton === _id
+                  ? "bg-teal-500 text-white"
+                  : "bg-gray-200 text-gray-700 hover:bg-teal-100"
               }`}
               onClick={() => setActiveButton(name)}
             >
